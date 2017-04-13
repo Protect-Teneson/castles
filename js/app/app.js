@@ -10,11 +10,12 @@
 			$http.post('https://p-teneson.herokuapp.com/contact', form.data).success(function (res) {
 				console.log(res.status);
 				form.response = res;
+				form.data = {};
 			}).error(function (res) {
 				console.log(res.status);
 				form.response = res;
 			});
-			form.data = {};
+			
 		//	$scope.loading = false;
 		};
 	}]);
